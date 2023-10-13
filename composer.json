@@ -1,0 +1,28 @@
+{
+    "name": "franciscojr-dev/flinkbot",
+    "description": "Cryptocurrency trading bot on the Binance exchange",
+    "version": "1.0.0",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Francisco Júnior",
+            "email": "franciscojr.dev@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Flinkbot\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "ext-bcmath": "*",
+        "ext-mbstring": "*",
+        "ext-openssl": "*",
+        "ext-pdo": "*",
+        "ext-pdo_sqlite": "*",
+        "ext-curl": "*",
+        "ext-json": "*"
+    }
+}
