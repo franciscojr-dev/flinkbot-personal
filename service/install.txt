@@ -1,0 +1,16 @@
+sudo adduser flinkbot
+mkdir /home/flinkbot
+
+chown -R flinkbot:flinkbot /home/flinkbot/
+cp /var/www/html/application/service/flinkbot.service /etc/systemd/system/flinkbot.service
+
+sudo usermod -a -G sudo flinkbot
+
+systemctl daemon-reload
+systemctl enable flinkbot
+
+service flinkbot start
+service flinkbot status
+
+date.timezone = America/Sao_Paulo
+ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
