@@ -1,0 +1,19 @@
+[Unit]
+Description=Flinkbot Server
+After=network.target
+
+[Service]
+Type=simple
+User=flinkbot
+Group=flinkbot
+Restart=on-failure
+WorkingDirectory=/var/www/html/application
+ExecStart=/usr/bin/php server.php
+TasksMax=300
+CPUAccounting=true
+CPUQuota=75%
+MemoryAccounting=true
+MemoryMax=3072M
+
+[Install]
+WantedBy=multi-user.target
